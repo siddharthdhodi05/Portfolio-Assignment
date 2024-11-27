@@ -19,7 +19,7 @@ const Hero = ({sectionKey}) => {
           {/* Animated Image */}
           <motion.img
            key={sectionKey}
-            src="../../public/me.jpg"
+            src="/me.jpg"
             alt="Profile"
             width={100}
             height={100}
