@@ -51,7 +51,7 @@ const Hero = ({sectionKey}) => {
 
           {/* Animated Button */}
           <motion.a
-            href="https://drive.google.com/file/d/1VWBWPU-0HTWRE_tQ_T9KLLD42ZgYrLzD/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1rLyto4vPNFTTMrBlMQyIY8BJq7dwGBfJ/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-blue-600 py-2 px-4 rounded-full font-bold hover:bg-gray-200 transition duration-300"
