@@ -5,6 +5,7 @@ const Hero = ({ sectionKey }) => {
   return (
     <>
       <section
+        id="hero"
         className="relative text-white py-20 w-full bg-cover bg-center"
         style={{
           backgroundImage:
@@ -53,25 +54,20 @@ const Hero = ({ sectionKey }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              Passionate about technology, solving problems, and creating
-              user-friendly applications. Always eager to learn and improve my
-              skills, with a focus on full-stack development and building
-              innovative solutions.
+              Passionate about technology, solving problems, and creating user-friendly applications. Always eager to learn and improve my skills, with a focus on full-stack development and building innovative solutions.
             </motion.p>
 
-            {/* Animated Resume Button */}
+            {/* Resume Button with Hover Glow Effect */}
             <motion.a
               href="https://drive.google.com/file/d/1rLyto4vPNFTTMrBlMQyIY8BJq7dwGBfJ/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white py-4 px-6 rounded-full font-bold text-xl hover:bg-blue-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
-              whileHover={{
-                scale: 1.1,
-                boxShadow: "0 0 15px rgba(0, 123, 255, 0.7)",
-                transition: { duration: 0.3 },
-              }}
+              className="relative px-8 py-4 font-bold text-white rounded-lg group mt-6"
             >
-              Resume
+              {/* Hover effect and background transitions */}
+              <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-purple-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-pink-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
+              <span className="relative">Resume</span>
             </motion.a>
           </motion.div>
 

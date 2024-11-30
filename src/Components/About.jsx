@@ -20,7 +20,7 @@ const About = ({ sectionKey }) => {
 
         {/* First Row: Larger Card */}
         <motion.div
-          className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-2xl p-8 font-mono text-sm relative transform transition-transform duration-300 hover:scale-105 hover:shadow-teal-600/80 mb-16"
+          className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-2xl p-8 font-mono text-sm relative transform transition-transform duration-300 hover:scale-105 hover:shadow-indigo-600/80 mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -72,8 +72,9 @@ const About = ({ sectionKey }) => {
           </div>
         </motion.div>
 
+        {/* IDE Card and Video Row */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-16">
-          {/* Smaller Card: Achievements */}
+          {/* Smaller IDE Styled Card */}
           <motion.div
             className="w-full md:w-1/2 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-2xl p-6 font-mono text-sm relative transform transition-transform duration-300 hover:scale-105 hover:shadow-indigo-600/80"
             initial={{ opacity: 0, y: 50 }}
@@ -127,7 +128,7 @@ const About = ({ sectionKey }) => {
             </div>
           </motion.div>
 
-          {/* Second GIF */}
+          {/* Video Section */}
           <motion.div
             key={sectionKey}
             className="w-full md:w-1/2 flex justify-center py-14 relative"
@@ -137,7 +138,7 @@ const About = ({ sectionKey }) => {
           >
             <div className="w-4/5 relative z-10">
               <video
-                src="/v1.mp4" // Ensure this file is in the public folder
+                src="/v1.mp4" // Ensure the video is in the public folder
                 autoPlay
                 loop
                 muted
@@ -145,6 +146,60 @@ const About = ({ sectionKey }) => {
                 className="w-full rounded-lg shadow-2xl border border-gray-700"
               ></video>
             </div>
+          </motion.div>
+        </div>
+
+        {/* GitHub Stats Section */}
+        <motion.h3
+          className="text-4xl font-extrabold text-center mt-16 mb-8 text-gray-100"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          GitHub Stats
+        </motion.h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* GitHub Stats */}
+          <motion.div
+            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-xl p-6 flex flex-col justify-center items-center hover:scale-105 hover:shadow-teal-600/80 transform transition-transform duration-300"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=siddharthdhodi05&theme=dark&show_icons=true&count_private=true"
+              alt="GitHub Stats"
+              className="rounded-lg shadow-md border border-gray-700"
+            />
+          </motion.div>
+
+          {/* GitHub Streaks */}
+          <motion.div
+            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-xl p-6 flex flex-col justify-center items-center hover:scale-105 hover:shadow-teal-600/80 transform transition-transform duration-300"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <img
+              src="https://streak-stats.demolab.com/?user=siddharthdhodi05&theme=dark"
+              alt="GitHub Streak Stats"
+              className="rounded-lg shadow-md border border-gray-700"
+            />
+          </motion.div>
+
+          {/* Coming Soon Card */}
+        <motion.div
+            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-xl p-6 flex flex-col justify-center items-center hover:scale-105 hover:shadow-teal-600/80 transform transition-transform duration-300"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.7 }}
+          >
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=siddharthdhodi05&theme=dark&langs_count=8&layout=compact"
+              alt="Languages Stats"
+              className="rounded-lg shadow-md border border-gray-700"
+            />
           </motion.div>
         </div>
       </div>
